@@ -151,6 +151,47 @@ const PROJECTS = [
       ],
     },
   },
+  {
+    id: "escapeoffice",
+    name: {
+      ko: "탈출 오피스",
+      en: "Escape Office",
+    },
+    tagline: {
+      ko: "퇴근을 방해하는 몬스터를 처치하는 2D 로그라이크 서바이벌 게임",
+      en: "A 2D roguelike survival game about fighting office-themed monsters to escape work.",
+    },
+    stack: [
+      "Phaser 3",
+      "JavaScript",
+      "Vite",
+      "Flask",
+      "Groq",
+      "LLM API",
+      "MySQL",
+      "SQLAlchemy",
+    ],
+    tags: ["game", "ai", "web"],
+    readme: "projects/escapeoffice.md",
+    links: {
+      github: "https://github.com/P4HB/escapeoffice",
+      notion: "https://www.notion.so/24793351a63b809a83c0d96cc8bf8786?source=copy_link",
+    },
+    highlights: {
+      ko: [
+        "Phaser 3 기반 2D 로그라이크 서바이벌 게임 구현",
+        "무기 강화·진화, XP, 보스 등장 조건 등 성장 루프 설계",
+        "Groq/Flask 기반 NPC 대화 및 보스 스탯 연동 시스템 구현",
+        "로그인, 플레이 기록, 대화 로그 저장용 Flask/MySQL 백엔드 구축",
+      ],
+      en: [
+        "Built a Phaser 3-based 2D roguelike survival game",
+        "Designed progression loops for weapons, XP, evolution, and boss spawns",
+        "Implemented Groq/Flask NPC dialogue tied to boss stat changes",
+        "Built Flask/MySQL backend for auth, play records, and dialogue logs",
+      ],
+    },
+  },
 ];
 
 // Support both browser globals and (optional) module usage.
