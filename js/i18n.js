@@ -14,9 +14,9 @@
 const I18N = {
   ko: {
     meta: {
-      title: "P4HB — KAIST 전산학부 · AI · 풀스택 · 임베디드",
+      title: "P4HB — KAIST 전산학부 · AI · 풀스택 · 프로덕트",
       description:
-        "KAIST 전산학부 학생이자 실제 차량 데이터로 AI를 만드는 풀스택·임베디드 엔지니어 P4HB의 포트폴리오입니다.",
+        "KAIST 전산학부 학생이자 AI와 풀스택 제품을 만드는 개발자 P4HB의 포트폴리오입니다.",
     },
 
     skipLink: "본문으로 건너뛰기",
@@ -40,10 +40,10 @@ const I18N = {
     hero: {
       eyebrow: "Portfolio / 2026",
       name: "P4HB",
-      nameNote: "KAIST CS · Vehicle Data AI · Full-stack / Embedded",
+      nameNote: "KAIST CS · AI · Full-stack · Product Engineering",
       tagline:
-        "실제 차량 센서 데이터와 제품 구현 사이를 잇습니다. KAIST 전산학부에서 컴퓨터과학을 배우고, 현장 데이터로 AI 파이프라인과 풀스택 제품을 만듭니다.",
-      badges: ["KAIST 전산학부", "AI", "Full-stack", "Embedded"],
+        "아이디어를 작동하는 제품으로 옮기는 데 관심이 있습니다. KAIST 전산학부에서 컴퓨터과학을 배우며 AI 기능, 웹·앱 서비스, 데이터 기반 시스템을 구현합니다.",
+      badges: ["KAIST 전산학부", "AI", "Full-stack", "App/Web"],
       contact: {
         githubLabel: "GitHub",
         githubAria: "GitHub 프로필로 이동 (새 탭)",
@@ -144,13 +144,9 @@ const I18N = {
       filterAll: "전체",
       tagLabels: {
         game: "게임",
-        unity: "Unity",
-        "3d": "3D",
         ai: "AI",
-        mobile: "모바일",
-        fullstack: "풀스택",
+        app: "앱",
         web: "웹",
-        cv: "컴퓨터 비전",
       },
       links: {
         github: "GitHub",
@@ -179,10 +175,18 @@ const I18N = {
         },
         {
           label: "AI·데이터",
-          items: ["Gemini API", "SVM", "CNN", "시계열 데이터 처리·보간"],
+          items: [
+            "LLM API",
+            "RAG",
+            "Agentic Workflow",
+            "Prompt Engineering",
+            "Vector Search",
+            "SVM/CNN",
+            "시계열 데이터 처리",
+          ],
         },
         {
-          label: "임베디드·차량",
+          label: "임베디드·하드웨어",
           items: ["CAN", "GNSS", "Jetson", "BLF/MF4 로깅"],
         },
         {
@@ -207,9 +211,9 @@ const I18N = {
 
   en: {
     meta: {
-      title: "P4HB — KAIST CS · AI · Full-stack · Embedded",
+      title: "P4HB — KAIST CS · AI · Full-stack · Product",
       description:
-        "Portfolio of P4HB, a KAIST Computer Science student and full-stack / AI / embedded engineer who has shipped real work on production vehicle data.",
+        "Portfolio of P4HB, a KAIST Computer Science student building AI features and full-stack products.",
     },
 
     skipLink: "Skip to content",
@@ -233,10 +237,10 @@ const I18N = {
     hero: {
       eyebrow: "Portfolio / 2026",
       name: "P4HB",
-      nameNote: "KAIST CS · Vehicle Data AI · Full-stack / Embedded",
+      nameNote: "KAIST CS · AI · Full-stack · Product Engineering",
       tagline:
-        "I connect real vehicle sensor data with shipped software. At KAIST CS, I build across AI pipelines, embedded logging, and full-stack products.",
-      badges: ["KAIST School of Computing", "AI", "Full-stack", "Embedded"],
+        "I like turning ideas into working products. At KAIST CS, I build AI features, web/app services, and data-driven systems.",
+      badges: ["KAIST School of Computing", "AI", "Full-stack", "App/Web"],
       contact: {
         githubLabel: "GitHub",
         githubAria: "Open GitHub profile (new tab)",
@@ -337,13 +341,9 @@ const I18N = {
       filterAll: "All",
       tagLabels: {
         game: "Game",
-        unity: "Unity",
-        "3d": "3D",
         ai: "AI",
-        mobile: "Mobile",
-        fullstack: "Full-stack",
+        app: "App",
         web: "Web",
-        cv: "Computer Vision",
       },
       links: {
         github: "GitHub",
@@ -372,10 +372,18 @@ const I18N = {
         },
         {
           label: "AI & Data",
-          items: ["Gemini API", "SVM", "CNN", "Time-series Processing & Interpolation"],
+          items: [
+            "LLM API",
+            "RAG",
+            "Agentic Workflow",
+            "Prompt Engineering",
+            "Vector Search",
+            "SVM/CNN",
+            "Time-series Processing",
+          ],
         },
         {
-          label: "Embedded & Vehicle",
+          label: "Embedded & Hardware",
           items: ["CAN", "GNSS", "Jetson", "BLF/MF4 Logging"],
         },
         {

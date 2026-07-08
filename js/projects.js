@@ -51,7 +51,7 @@ const PROJECTS = [
       "TextMeshPro",
       "Git/GitHub",
     ],
-    tags: ["game", "unity", "3d"],
+    tags: ["game"],
     links: {
       notion: "https://www.notion.so/24793351a63b80f9887df251a5d869dc?source=copy_link",
     },
@@ -84,13 +84,13 @@ const PROJECTS = [
       "Flutter",
       "Dart",
       "Supabase",
-      "Gemini API",
+      "LLM API",
       "flutter_map",
       "OpenStreetMap",
       "geolocator",
       "flutter_localizations",
     ],
-    tags: ["ai", "mobile", "fullstack"],
+    tags: ["app", "ai"],
     links: {
       // No dedicated repo URL was provided for this project — linking
       // to the GitHub profile rather than guessing a repo slug.
@@ -127,7 +127,7 @@ const PROJECTS = [
     // this list short and generic, limited to what's directly implied
     // by the feature set, rather than inventing specifics.
     stack: ["Motion Recognition", "Computer Vision", "Video Analysis"],
-    tags: ["ai", "web", "cv"],
+    tags: ["app", "ai"],
     links: {},
     highlights: {
       ko: [
