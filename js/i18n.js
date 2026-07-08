@@ -1,22 +1,17 @@
 /**
  * i18n.js
  * ------------------------------------------------------------------
- * Single source of truth for ALL Korean/English copy on the site.
- * main.js reads this object and renders the DOM from it — index.html
- * never needs to be touched to change wording. Project-specific copy
- * (names, taglines, highlight bullets) lives in projects.js instead,
- * since it travels together with each project's structured data.
- *
- * Structure: I18N[langCode].<section>.<field>
+ * Single source of truth for Korean/English copy on the portfolio.
+ * Project-specific copy lives in projects.js.
  * ------------------------------------------------------------------
  */
 
 const I18N = {
   ko: {
     meta: {
-      title: "P4HB — KAIST 전산학부 · AI · 풀스택 · 프로덕트",
+      title: "P4HB | KAIST CS · AI Product Builder",
       description:
-        "KAIST 전산학부 학생이자 AI와 풀스택 제품을 만드는 개발자 P4HB의 포트폴리오입니다.",
+        "KAIST 전산학부에서 컴퓨터과학을 배우며 AI 기능, 웹/앱 서비스, 게임 시스템을 구현하는 P4HB의 포트폴리오입니다.",
     },
 
     skipLink: "본문으로 건너뛰기",
@@ -25,11 +20,11 @@ const I18N = {
       brand: "P4HB",
       links: [
         { id: "home", label: "홈" },
-        { id: "highlights", label: "하이라이트" },
-        { id: "experience", label: "경력" },
+        { id: "highlights", label: "방향" },
+        { id: "experience", label: "경험" },
         { id: "projects", label: "프로젝트" },
         { id: "skills", label: "기술" },
-        { id: "contact", label: "연락처" },
+        { id: "contact", label: "연락" },
       ],
       langToggleLabel: "EN",
       langToggleAria: "언어를 영어로 전환",
@@ -38,84 +33,85 @@ const I18N = {
     },
 
     hero: {
-      eyebrow: "Portfolio / 2026",
+      eyebrow: "AI Product Builder / KAIST CS",
       name: "P4HB",
-      nameNote: "KAIST CS · AI · Full-stack · Product Engineering",
+      nameNote: "KAIST 전산학부 · AI / Web / App / Game",
       tagline:
-        "아이디어를 작동하는 제품으로 옮기는 데 관심이 있습니다. KAIST 전산학부에서 컴퓨터과학을 배우며 AI 기능, 웹·앱 서비스, 데이터 기반 시스템을 구현합니다.",
-      badges: ["KAIST 전산학부", "AI", "Full-stack", "App/Web"],
+        "아이디어를 빠르게 작동하는 제품으로 만듭니다. LLM 기반 추천, 데이터 파이프라인, 웹/앱 서비스, 게임 시스템까지 직접 설계하고 구현합니다.",
+      badges: ["AI Product", "Full-stack", "Rapid Prototyping", "Game Systems"],
+      proofs: [
+        { label: "AI", body: "추천·RAG·LLM 재정렬 파이프라인" },
+        { label: "Product", body: "Flutter·React Native·Web 서비스 구현" },
+        { label: "Systems", body: "데이터 처리·서버·게임 로직 설계" },
+      ],
       contact: {
         githubLabel: "GitHub",
-        githubAria: "GitHub 프로필로 이동 (새 탭)",
+        githubAria: "GitHub 프로필로 이동",
         emailLabel: "Email",
-        emailAria: "이메일 보내기: naldadev@gmail.com",
+        emailAria: "naldadev@gmail.com으로 이메일 보내기",
       },
-      scrollHint: "아래로 스크롤",
+      scrollHint: "Projects below",
     },
 
     highlights: {
-      title: "하이라이트",
-      subtitle: "학습, 현장 경험, 직접 만든 결과물을 한 화면에 압축했습니다.",
+      title: "만드는 방향",
+      subtitle: "단순한 기능 목록보다, 어떤 문제를 어떤 구조로 풀었는지가 드러나도록 정리했습니다.",
       items: [
         {
-          icon: "education",
-          label: "학력",
-          title: "KAIST 전산학부 재학",
-          body: "2021년 입학, 컴퓨터과학을 전공하며 이론과 구현을 함께 다지고 있습니다.",
-        },
-        {
-          icon: "briefcase",
-          label: "실무 경력",
-          title: "군 복무 중 웹 개발·서버 운영, 이후 소프트웨어 인턴",
-          body: "공군에서 실서비스의 웹 개발과 서버 운영을 담당했고, 전역 후 쓰리세컨즈에서 소프트웨어 인턴으로 실무를 이어갔습니다.",
-        },
-        {
           icon: "cpu",
-          label: "AI·국가과제 경험",
-          title: "국가 R&D 과제에 AI 엔지니어로 투입",
-          body: "인턴 기간 중 차량 센서 기반 노면 상태 판별 국가 R&D 과제에 실제로 투입되어 AI 파이프라인을 구축했습니다.",
+          label: "AI 제품화",
+          title: "모델 호출에서 끝내지 않고 제품 흐름에 붙입니다",
+          body: "후보 검색, 1차 스코어링, LLM 재정렬, 실패 대응까지 사용자가 실제로 쓰는 흐름 안에서 설계합니다.",
         },
         {
           icon: "layers",
-          label: "다수의 개인 프로젝트",
-          title: "게임부터 모바일, 웹까지 완주해온 프로젝트들",
-          body: "게임, 모바일, 웹 등 서로 다른 도메인에서 아이디어를 끝까지 구현해낸 프로젝트들이 계속 쌓이고 있습니다.",
+          label: "엔드투엔드 구현",
+          title: "프론트, 백엔드, 데이터 흐름을 이어서 만듭니다",
+          body: "앱 화면, 상태 관리, API, DB, 배포 흐름까지 작은 팀에서도 완성 가능한 단위로 구현합니다.",
+        },
+        {
+          icon: "briefcase",
+          label: "현장 데이터",
+          title: "로그와 센서 데이터도 제품의 일부로 다룹니다",
+          body: "GNSS/CAN 등 시계열 데이터를 정리하고 모델 입력으로 바꾸는 파이프라인을 다뤄봤습니다.",
+        },
+        {
+          icon: "education",
+          label: "CS 기반",
+          title: "KAIST 전산학부에서 기본기를 쌓고 있습니다",
+          body: "알고리즘, 시스템, AI 기초를 바탕으로 빠르게 만들되 구조를 놓치지 않으려 합니다.",
         },
       ],
     },
 
     experience: {
-      title: "경력",
-      subtitle: "최근 순으로 정리했습니다.",
+      title: "경험",
+      subtitle: "최근 경험과 실제로 맡았던 역할 중심으로 정리했습니다.",
       items: [
         {
           org: "쓰리세컨즈",
           role: "Software Intern",
-          period: "2025.12 — 2026 봄",
-          badge: "국가과제",
+          period: "2025.12 - 2026 봄",
+          badge: "National R&D",
           bullets: [
             {
               label: "차량 데이터 분석",
-              text: "차량 GNSS·CAN 시계열 데이터 수집, 병합, 분석",
+              text: "GNSS·CAN 시계열 데이터 수집, 병합, 분석",
             },
             {
-              label: "임베디드 시스템 개발",
-              text: "Jetson을 차량에 연결해 주행 데이터를 BLF/MF4 포맷으로 로깅하는 시스템 구축",
+              label: "임베디드 로깅",
+              text: "Jetson 기반 주행 데이터 BLF/MF4 로깅 시스템 구현",
             },
             {
-              label: "AI 개발",
-              text: "국내 완성차 기업 테스트 드라이버 주행 데이터 분석용 AI 분석 엔진 개발",
-            },
-            {
-              label: "국가 R&D 과제 참여",
-              text: "실제 차량에 센서를 연결해 블랙아이스·노면 상태를 판별하는 과제 수행. 센서 데이터 interpolation 및 SVM/CNN 모델 입력을 위한 데이터 전처리 파이프라인 구축",
+              label: "AI 파이프라인",
+              text: "센서 데이터 보간 및 SVM/CNN 입력 전처리 파이프라인 구축",
             },
           ],
         },
         {
           org: "공군",
           role: "웹 개발 및 서버 운영",
-          period: "2023 — 2024",
+          period: "2023 - 2024",
           badge: null,
           bullets: [
             { label: null, text: "공군 학습포털 유지보수 및 기능 개발" },
@@ -126,12 +122,12 @@ const I18N = {
         {
           org: "KAIST 전산학부",
           role: "학사 과정",
-          period: "2021 — 재학중",
+          period: "2021 - 현재",
           badge: null,
           bullets: [
             {
               label: null,
-              text: "컴퓨터과학 전공으로 알고리즘, 시스템, AI 전반의 기초를 다지고 있습니다.",
+              text: "컴퓨터과학 전공으로 알고리즘, 시스템, AI 기반을 학습하고 있습니다.",
             },
           ],
         },
@@ -140,7 +136,7 @@ const I18N = {
 
     projects: {
       title: "프로젝트",
-      subtitle: "아이디어에서 구현, 분석, 배포까지 직접 밀어붙인 작업들입니다.",
+      subtitle: "완성도보다 더 중요한 것은 문제를 잡고, 구조를 만들고, 실제 동작까지 밀어붙인 기록입니다.",
       filterAll: "전체",
       tagLabels: {
         game: "게임",
@@ -150,60 +146,52 @@ const I18N = {
       },
       links: {
         github: "GitHub",
-        githubProfile: "GitHub 프로필",
-        notion: "Notion 문서",
+        githubProfile: "GitHub",
+        notion: "문서",
         other: "링크",
-        detail: "자세히 보기",
+        detail: "상세 보기",
       },
       more: {
-        title: "더 많은 프로젝트는 GitHub에서",
-        body: "여기에 아직 정리하지 못한 프로젝트들이 더 있습니다.",
-        linkText: "GitHub 방문하기",
+        title: "더 많은 작업은 GitHub에",
+        body: "아직 정리하지 않은 실험과 작은 프로젝트들도 계속 쌓고 있습니다.",
+        linkText: "GitHub 보기",
       },
     },
 
     skills: {
       title: "기술 스택",
-      subtitle: "프로젝트와 실무에서 사용한 도구들을 분류했습니다.",
+      subtitle: "기술 이름을 길게 늘어놓기보다, 실제 구현 축에 맞춰 묶었습니다.",
       groups: [
         {
-          label: "언어",
-          items: ["Python", "C#", "Dart", "JavaScript", "Java", "SQL"],
+          label: "AI Product",
+          items: ["LLM API", "RAG", "Agentic Workflow", "Prompt Engineering", "Vector Search"],
         },
         {
-          label: "프레임워크·플랫폼",
-          items: ["Spring", "jQuery", "Flutter", "Unity", "Supabase"],
+          label: "App / Web",
+          items: ["Flutter", "React Native", "Expo", "JavaScript", "Supabase"],
         },
         {
-          label: "AI·데이터",
-          items: [
-            "LLM API",
-            "RAG",
-            "Agentic Workflow",
-            "Prompt Engineering",
-            "Vector Search",
-            "SVM/CNN",
-            "시계열 데이터 처리",
-          ],
+          label: "Backend / Data",
+          items: ["Python", "Java", "Spring", "PostgreSQL", "Oracle", "SQL"],
         },
         {
-          label: "임베디드·하드웨어",
-          items: ["CAN", "GNSS", "Jetson", "BLF/MF4 로깅"],
+          label: "Game / Interactive",
+          items: ["Unity", "C#", "Phaser 3", "Blender", "NavMesh"],
         },
         {
-          label: "데이터베이스",
-          items: ["Oracle", "PostgreSQL"],
+          label: "Sensor / ML",
+          items: ["CAN", "GNSS", "Jetson", "BLF/MF4", "SVM/CNN", "Time-series Processing"],
         },
         {
-          label: "도구",
-          items: ["Git/GitHub", "Blender", "Netlify"],
+          label: "Workflow",
+          items: ["Git/GitHub", "Vite", "Netlify", "Localization"],
         },
       ],
     },
 
     footer: {
-      title: "연락처",
-      body: "새로운 프로젝트, 협업, 혹은 그냥 이야기 — 편하게 연락 주세요.",
+      title: "Contact",
+      body: "프로젝트, 협업, 또는 그냥 이야기하고 싶은 주제가 있다면 편하게 연락 주세요.",
       githubLabel: "GitHub",
       emailLabel: "Email",
       copyright: "© 2026 P4HB. All rights reserved.",
@@ -212,9 +200,9 @@ const I18N = {
 
   en: {
     meta: {
-      title: "P4HB — KAIST CS · AI · Full-stack · Product",
+      title: "P4HB | KAIST CS · AI Product Builder",
       description:
-        "Portfolio of P4HB, a KAIST Computer Science student building AI features and full-stack products.",
+        "Portfolio of P4HB, a KAIST Computer Science student building AI features, web/app services, and game systems.",
     },
 
     skipLink: "Skip to content",
@@ -223,113 +211,114 @@ const I18N = {
       brand: "P4HB",
       links: [
         { id: "home", label: "Home" },
-        { id: "highlights", label: "Highlights" },
+        { id: "highlights", label: "Direction" },
         { id: "experience", label: "Experience" },
         { id: "projects", label: "Projects" },
         { id: "skills", label: "Skills" },
         { id: "contact", label: "Contact" },
       ],
-      langToggleLabel: "한글",
+      langToggleLabel: "KO",
       langToggleAria: "Switch language to Korean",
       menuOpenAria: "Open menu",
       menuCloseAria: "Close menu",
     },
 
     hero: {
-      eyebrow: "Portfolio / 2026",
+      eyebrow: "AI Product Builder / KAIST CS",
       name: "P4HB",
-      nameNote: "KAIST CS · AI · Full-stack · Product Engineering",
+      nameNote: "KAIST CS · AI / Web / App / Game",
       tagline:
-        "I like turning ideas into working products. At KAIST CS, I build AI features, web/app services, and data-driven systems.",
-      badges: ["KAIST School of Computing", "AI", "Full-stack", "App/Web"],
+        "I turn ideas into working products quickly. I design and build LLM-powered recommendations, data pipelines, web/app services, and game systems.",
+      badges: ["AI Product", "Full-stack", "Rapid Prototyping", "Game Systems"],
+      proofs: [
+        { label: "AI", body: "Recommendation, RAG, and LLM reranking pipelines" },
+        { label: "Product", body: "Flutter, React Native, and web services" },
+        { label: "Systems", body: "Data processing, backend, and game logic" },
+      ],
       contact: {
         githubLabel: "GitHub",
-        githubAria: "Open GitHub profile (new tab)",
+        githubAria: "Open GitHub profile",
         emailLabel: "Email",
         emailAria: "Send an email to naldadev@gmail.com",
       },
-      scrollHint: "Scroll down",
+      scrollHint: "Projects below",
     },
 
     highlights: {
-      title: "Highlights",
-      subtitle: "Education, field experience, and shipped work in one focused snapshot.",
+      title: "Build Direction",
+      subtitle: "A clearer view of the problems I choose and the systems I build around them.",
       items: [
         {
-          icon: "education",
-          label: "Education",
-          title: "KAIST, School of Computing",
-          body: "Enrolled since 2021, majoring in Computer Science — building both theory and hands-on implementation.",
-        },
-        {
-          icon: "briefcase",
-          label: "Industry Experience",
-          title: "Web dev & server ops during service, then a software internship",
-          body: "Handled web development and server operations for a live system during military service, then continued in industry as a software intern at Threeseconds.",
-        },
-        {
           icon: "cpu",
-          label: "AI & National R&D",
-          title: "Deployed as an AI engineer on a national R&D project",
-          body: "During the internship, contributed to a government R&D project detecting road surface conditions from vehicle sensors — building the AI pipeline end to end.",
+          label: "AI Productization",
+          title: "I connect model calls to real product flows",
+          body: "Search, first-pass scoring, LLM reranking, and fallback logic are designed around how the user actually moves through the product.",
         },
         {
           icon: "layers",
-          label: "A Growing Body of Side Projects",
-          title: "Shipped projects across game, mobile, and web",
-          body: "A continually growing set of projects across different domains, each one carried through to a finished, working product.",
+          label: "End-to-end",
+          title: "I connect frontend, backend, and data flow",
+          body: "Screens, state, APIs, databases, and deployment are shaped into units a small team can actually ship.",
+        },
+        {
+          icon: "briefcase",
+          label: "Field Data",
+          title: "I treat logs and sensor data as product material",
+          body: "I have worked with GNSS/CAN time-series data and model-input preprocessing pipelines.",
+        },
+        {
+          icon: "education",
+          label: "CS Foundation",
+          title: "Building from a KAIST CS foundation",
+          body: "I move fast, but try to keep the structure grounded in algorithms, systems, and AI fundamentals.",
         },
       ],
     },
 
     experience: {
       title: "Experience",
-      subtitle: "Listed most recent first.",
+      subtitle: "Recent roles and what I actually handled.",
       items: [
         {
           org: "Threeseconds",
           role: "Software Intern",
-          period: "Dec 2025 — Spring 2026",
+          period: "Dec 2025 - Spring 2026",
           badge: "National R&D",
           bullets: [
             {
               label: "Vehicle Data Analysis",
-              text: "Collected, merged, and analyzed vehicle GNSS and CAN time-series data",
+              text: "Collected, merged, and analyzed GNSS/CAN time-series data",
             },
             {
-              label: "Embedded Systems",
-              text: "Built a logging system connecting a Jetson to the vehicle, recording driving data in BLF/MF4 format",
+              label: "Embedded Logging",
+              text: "Built a Jetson-based BLF/MF4 driving-data logging system",
             },
             {
-              label: "AI Development",
-              text: "Built an AI analysis engine for test-driver driving data at a domestic automotive company",
-            },
-            {
-              label: "National R&D Project",
-              text: "Contributed to a project detecting black ice and road surface conditions via in-vehicle sensors — built the data preprocessing pipeline, including interpolation and SVM/CNN model input prep",
+              label: "AI Pipeline",
+              text: "Built interpolation and SVM/CNN input preprocessing for sensor data",
             },
           ],
         },
         {
           org: "Republic of Korea Air Force",
           role: "Web Development & Server Operations",
-          period: "2023 — 2024",
+          period: "2023 - 2024",
           badge: null,
           bullets: [
-            { label: null, text: "Maintained and extended the Air Force e-learning portal" },
+            { label: null, text: "Maintained and extended an Air Force learning portal" },
             { label: null, text: "Developed with Spring + jQuery" },
-            { label: null, text: "Managed the Oracle database" },
+            { label: null, text: "Managed an Oracle database" },
           ],
         },
         {
           org: "KAIST, School of Computing",
           role: "B.S. in Computer Science",
-          period: "2021 — Present",
+          period: "2021 - Present",
           badge: null,
           bullets: [
             {
               label: null,
-              text: "Majoring in Computer Science — building a foundation across algorithms, systems, and AI.",
+              text: "Studying Computer Science with foundations across algorithms, systems, and AI.",
             },
           ],
         },
@@ -338,7 +327,7 @@ const I18N = {
 
     projects: {
       title: "Projects",
-      subtitle: "Self-directed work pushed from idea to implementation, analysis, and release.",
+      subtitle: "Not just feature lists: each card shows the problem, the build, and the technical core.",
       filterAll: "All",
       tagLabels: {
         game: "Game",
@@ -348,60 +337,52 @@ const I18N = {
       },
       links: {
         github: "GitHub",
-        githubProfile: "GitHub Profile",
-        notion: "Notion Writeup",
+        githubProfile: "GitHub",
+        notion: "Writeup",
         other: "Link",
-        detail: "View details",
+        detail: "Details",
       },
       more: {
-        title: "More projects on GitHub",
-        body: "There's more that hasn't made it onto this page yet.",
+        title: "More work on GitHub",
+        body: "Smaller experiments and unfinished notes are still accumulating there.",
         linkText: "Visit GitHub",
       },
     },
 
     skills: {
       title: "Skills",
-      subtitle: "Tools grouped by where they fit in the work.",
+      subtitle: "Grouped by implementation role rather than a raw keyword dump.",
       groups: [
         {
-          label: "Languages",
-          items: ["Python", "C#", "Dart", "JavaScript", "Java", "SQL"],
+          label: "AI Product",
+          items: ["LLM API", "RAG", "Agentic Workflow", "Prompt Engineering", "Vector Search"],
         },
         {
-          label: "Frameworks & Platforms",
-          items: ["Spring", "jQuery", "Flutter", "Unity", "Supabase"],
+          label: "App / Web",
+          items: ["Flutter", "React Native", "Expo", "JavaScript", "Supabase"],
         },
         {
-          label: "AI & Data",
-          items: [
-            "LLM API",
-            "RAG",
-            "Agentic Workflow",
-            "Prompt Engineering",
-            "Vector Search",
-            "SVM/CNN",
-            "Time-series Processing",
-          ],
+          label: "Backend / Data",
+          items: ["Python", "Java", "Spring", "PostgreSQL", "Oracle", "SQL"],
         },
         {
-          label: "Embedded & Hardware",
-          items: ["CAN", "GNSS", "Jetson", "BLF/MF4 Logging"],
+          label: "Game / Interactive",
+          items: ["Unity", "C#", "Phaser 3", "Blender", "NavMesh"],
         },
         {
-          label: "Database",
-          items: ["Oracle", "PostgreSQL"],
+          label: "Sensor / ML",
+          items: ["CAN", "GNSS", "Jetson", "BLF/MF4", "SVM/CNN", "Time-series Processing"],
         },
         {
-          label: "Tools",
-          items: ["Git/GitHub", "Blender", "Netlify"],
+          label: "Workflow",
+          items: ["Git/GitHub", "Vite", "Netlify", "Localization"],
         },
       ],
     },
 
     footer: {
       title: "Contact",
-      body: "New projects, collaborations, or just a conversation — feel free to reach out.",
+      body: "For projects, collaboration, or just a good technical conversation, feel free to reach out.",
       githubLabel: "GitHub",
       emailLabel: "Email",
       copyright: "© 2026 P4HB. All rights reserved.",
@@ -409,7 +390,6 @@ const I18N = {
   },
 };
 
-// Support both browser globals and (optional) module usage.
 if (typeof module !== "undefined" && module.exports) {
   module.exports = I18N;
 }

@@ -139,6 +139,17 @@
       badgeRow.appendChild(el("li", { class: "badge" }, [document.createTextNode(badge)]));
     });
 
+    var proofGrid = qs("[data-hero-proofs]");
+    proofGrid.innerHTML = "";
+    (copy.proofs || []).forEach(function (proof) {
+      proofGrid.appendChild(
+        el("div", { class: "hero-proof" }, [
+          el("p", { class: "hero-proof-label mono", text: proof.label }),
+          el("p", { class: "hero-proof-body", text: proof.body }),
+        ])
+      );
+    });
+
     var githubLink = qs("[data-hero-github]");
     githubLink.setAttribute("aria-label", copy.contact.githubAria);
     githubLink.querySelector("[data-icon-slot]").innerHTML = ICONS.github;
@@ -358,12 +369,28 @@
         }
       );
 
+      var focusList = el("div", { class: "project-focus" });
+      (project.focus && project.focus[lang] ? project.focus[lang] : []).forEach(function (item) {
+        focusList.appendChild(
+          el("p", { class: "project-focus-row" }, [
+            el("span", { class: "project-focus-label mono", text: item.label }),
+            el("span", { class: "project-focus-text", text: item.text }),
+          ])
+        );
+      });
+
       var linksNode = projectLinkButtons(project, lang);
 
       var cardChildren = [
-        tagList,
+        el("div", { class: "project-topline" }, [
+          tagList,
+          project.status
+            ? el("span", { class: "project-status mono", text: project.status[lang] || project.status.ko })
+            : null,
+        ]),
         el("h3", { class: "project-name", text: project.name[lang] || project.name.ko }),
         el("p", { class: "project-tagline", text: project.tagline[lang] || project.tagline.ko }),
+        focusList,
         highlightsList,
         stackList,
       ];
