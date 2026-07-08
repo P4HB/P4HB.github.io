@@ -152,6 +152,45 @@ const PROJECTS = [
     },
   },
   {
+    id: "godlifenote",
+    name: {
+      ko: "갓생노트",
+      en: "God Life Note",
+    },
+    tagline: {
+      ko: "소규모 그룹이 매일의 목표를 기록하고 서로 확인하는 소셜 책임감 앱",
+      en: "A social accountability app for small groups to record and review daily routines.",
+    },
+    stack: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "Supabase",
+      "Zustand",
+      "Expo Router",
+      "react-native-calendars",
+    ],
+    tags: ["app"],
+    readme: "projects/godlifenote.md",
+    links: {
+      github: "https://github.com/P4HB/godlifenote",
+    },
+    highlights: {
+      ko: [
+        "Expo Router 기반 인증·탭 플로우 구현",
+        "초대 코드 기반 그룹 생성·가입 시스템 구축",
+        "일일 기록, 자가 평가, 댓글, 벌금 확인 흐름 구현",
+        "Supabase Auth/Postgres와 Zustand 상태 관리 연동",
+      ],
+      en: [
+        "Built auth and tab flows with Expo Router",
+        "Implemented invite-code group creation and joining",
+        "Shipped daily records, grading, comments, and penalty views",
+        "Integrated Supabase Auth/Postgres with Zustand state stores",
+      ],
+    },
+  },
+  {
     id: "escapeoffice",
     name: {
       ko: "탈출 오피스",
