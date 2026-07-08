@@ -153,6 +153,7 @@ const I18N = {
         githubProfile: "GitHub 프로필",
         notion: "Notion 문서",
         other: "링크",
+        detail: "자세히 보기",
       },
       more: {
         title: "더 많은 프로젝트는 GitHub에서",
@@ -350,6 +351,7 @@ const I18N = {
         githubProfile: "GitHub Profile",
         notion: "Notion Writeup",
         other: "Link",
+        detail: "View details",
       },
       more: {
         title: "More projects on GitHub",

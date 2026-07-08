@@ -20,6 +20,7 @@
  *   tags: string[]          — canonical lowercase filter tags; the
  *                              filter UI is generated dynamically from
  *                              whatever tags appear across this array
+ *   readme: string          — markdown file rendered by project.html
  *   links: {                — any of these may be omitted; the
  *     github?: string,         renderer only shows buttons for links
  *     notion?: string,         that are actually present, and never
@@ -52,7 +53,9 @@ const PROJECTS = [
       "Git/GitHub",
     ],
     tags: ["game"],
+    readme: "projects/aot-combat-sim.md",
     links: {
+      github: "https://github.com/P4HB",
       notion: "https://www.notion.so/24793351a63b80f9887df251a5d869dc?source=copy_link",
     },
     highlights: {
@@ -91,6 +94,7 @@ const PROJECTS = [
       "flutter_localizations",
     ],
     tags: ["app", "ai"],
+    readme: "projects/hp-plus.md",
     links: {
       // No dedicated repo URL was provided for this project — linking
       // to the GitHub profile rather than guessing a repo slug.
@@ -128,6 +132,7 @@ const PROJECTS = [
     // by the feature set, rather than inventing specifics.
     stack: ["Motion Recognition", "Computer Vision", "Video Analysis"],
     tags: ["app", "ai"],
+    readme: "projects/reelsking.md",
     links: {},
     highlights: {
       ko: [

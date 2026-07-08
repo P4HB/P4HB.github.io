@@ -268,6 +268,16 @@
     var links = project.links || {};
     var count = 0;
 
+    if (project.readme) {
+      wrap.appendChild(
+        internalProjectLink(
+          "project.html?id=" + encodeURIComponent(project.id),
+          copy.detail,
+          ICONS.arrow
+        )
+      );
+      count++;
+    }
     if (links.github) {
       var isProfileRoot = /^https?:\/\/github\.com\/[^\/]+\/?$/i.test(links.github);
       wrap.appendChild(
@@ -296,6 +306,20 @@
         href: href,
         target: "_blank",
         rel: "noopener noreferrer",
+      },
+      [
+        el("span", { class: "project-link-icon", html: icon }),
+        el("span", { text: label }),
+      ]
+    );
+  }
+
+  function internalProjectLink(href, label, icon) {
+    return el(
+      "a",
+      {
+        class: "project-link",
+        href: href,
       },
       [
         el("span", { class: "project-link-icon", html: icon }),
