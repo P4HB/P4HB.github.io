@@ -32,6 +32,8 @@
     var lines = markdown.replace(/\r\n/g, "\n").split("\n");
     var html = [];
     var listOpen = false;
+    var orderedListOpen = false;
+    var tableOpen = false;
     var codeOpen = false;
     var codeLines = [];
 
@@ -39,6 +41,17 @@
       if (listOpen) {
         html.push("</ul>");
         listOpen = false;
+      }
+      if (orderedListOpen) {
+        html.push("</ol>");
+        orderedListOpen = false;
+      }
+    }
+
+    function closeTable() {
+      if (tableOpen) {
+        html.push("</tbody></table>");
+        tableOpen = false;
       }
     }
 
@@ -52,6 +65,7 @@
 
     lines.forEach(function (line) {
       if (line.trim().indexOf("```") === 0) {
+        closeTable();
         if (codeOpen) closeCode();
         else {
           closeList();
@@ -68,18 +82,59 @@
 
       if (!line.trim()) {
         closeList();
+        closeTable();
         return;
       }
 
       var heading = line.match(/^(#{1,3})\s+(.+)$/);
       if (heading) {
         closeList();
+        closeTable();
         html.push("<h" + heading[1].length + ">" + inlineMarkdown(heading[2]) + "</h" + heading[1].length + ">");
+        return;
+      }
+
+      var quote = line.match(/^>\s+(.+)$/);
+      if (quote) {
+        closeList();
+        closeTable();
+        html.push("<blockquote>" + inlineMarkdown(quote[1]) + "</blockquote>");
+        return;
+      }
+
+      var table = line.match(/^\|(.+)\|$/);
+      if (table) {
+        closeList();
+        var cells = table[1].split("|").map(function (cell) {
+          return cell.trim();
+        });
+        var isDivider = cells.every(function (cell) {
+          return /^:?-{3,}:?$/.test(cell);
+        });
+        if (isDivider) return;
+        if (!tableOpen) {
+          html.push("<table><tbody>");
+          tableOpen = true;
+        }
+        html.push(
+          "<tr>" +
+            cells
+              .map(function (cell) {
+                return "<td>" + inlineMarkdown(cell) + "</td>";
+              })
+              .join("") +
+            "</tr>"
+        );
         return;
       }
 
       var bullet = line.match(/^\s*[-*]\s+(.+)$/);
       if (bullet) {
+        closeTable();
+        if (orderedListOpen) {
+          html.push("</ol>");
+          orderedListOpen = false;
+        }
         if (!listOpen) {
           html.push("<ul>");
           listOpen = true;
@@ -88,12 +143,29 @@
         return;
       }
 
+      var ordered = line.match(/^\s*\d+\.\s+(.+)$/);
+      if (ordered) {
+        closeTable();
+        if (listOpen) {
+          html.push("</ul>");
+          listOpen = false;
+        }
+        if (!orderedListOpen) {
+          html.push("<ol>");
+          orderedListOpen = true;
+        }
+        html.push("<li>" + inlineMarkdown(ordered[1]) + "</li>");
+        return;
+      }
+
       closeList();
+      closeTable();
       html.push("<p>" + inlineMarkdown(line) + "</p>");
     });
 
     closeCode();
     closeList();
+    closeTable();
     return html.join("\n");
   }
 

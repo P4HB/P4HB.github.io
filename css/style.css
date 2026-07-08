@@ -1089,12 +1089,22 @@ body.nav-open .nav-mobile {
   list-style: none;
 }
 
+.markdown-body ol {
+  margin-top: 14px;
+  padding-left: 22px;
+  color: var(--text-muted);
+}
+
+.markdown-body ol li {
+  padding-left: 4px;
+}
+
 .markdown-body li {
   position: relative;
   padding-left: 18px;
 }
 
-.markdown-body li::before {
+.markdown-body ul li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1102,6 +1112,41 @@ body.nav-open .nav-mobile {
   width: 6px;
   height: 1px;
   background: var(--accent);
+}
+
+.markdown-body ol li::before {
+  display: none;
+}
+
+.markdown-body blockquote {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-raised);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+}
+
+.markdown-body table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.markdown-body td {
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  vertical-align: top;
+}
+
+.markdown-body tr:first-child td {
+  color: var(--text);
+  background: var(--bg-raised);
+  font-weight: 700;
 }
 
 .markdown-body a {
