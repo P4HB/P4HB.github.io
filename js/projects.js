@@ -70,20 +70,20 @@ const PROJECTS = [
       en: "Web · AI",
     },
     tagline: {
-      ko: "모션 인식 기반 댄스 챌린지 분석 웹 서비스",
-      en: "A web service for dance challenges with motion-recognition-based analysis.",
+      ko: "Python 모션 인식과 휴리스틱 채점 layer를 붙인 댄스 챌린지 분석 웹 서비스",
+      en: "A dance challenge analysis web service with Python motion recognition and a heuristic scoring layer.",
     },
     focus: {
       ko: [
         { label: "문제", text: "댄스 챌린지를 단순 업로드가 아니라 분석 가능한 콘텐츠로 전환" },
-        { label: "구현", text: "영상 입력, 모션 채점, 챌린지별 성장 추적 흐름 설계" },
+        { label: "구현", text: "Python 모션 인식 라이브러리와 휴리스틱 기반 점수 채점 AI layer" },
       ],
       en: [
         { label: "Problem", text: "Turn dance challenge videos into analyzable feedback loops" },
-        { label: "Build", text: "Video input, motion scoring, and challenge-level progress tracking" },
+        { label: "Build", text: "Python motion-recognition library plus heuristic AI scoring layer" },
       ],
     },
-    stack: ["Motion Recognition", "Computer Vision", "Video Analysis"],
+    stack: ["Python", "Motion Recognition", "Computer Vision", "Heuristic Scoring", "Video Analysis"],
     tags: ["web", "ai"],
     readme: "projects/reelsking.md",
     links: {
@@ -91,16 +91,16 @@ const PROJECTS = [
     },
     highlights: {
       ko: [
-        "유튜브·업로드·웹캠 기반 모션 인식 채점 플로우",
+        "Python 모션 인식 라이브러리 기반 동작 특징 추출",
+        "휴리스틱 기반 점수 채점 AI layer 구현",
         "검색 가능한 소셜 피드와 영상 공유 인터랙션",
         "챌린지별 점수 이력·통계 기반 성장 추적",
-        "학습과 반복 참여를 위한 게임화 구조",
       ],
       en: [
-        "Built motion scoring for YouTube, upload, and webcam inputs",
+        "Extracted motion features with a Python motion-recognition library",
+        "Built a heuristic AI scoring layer for dance accuracy",
         "Designed searchable social feed and video sharing interactions",
         "Implemented score history and progress tracking by challenge",
-        "Designed a gamified mode for faster challenge learning",
       ],
     },
   },
