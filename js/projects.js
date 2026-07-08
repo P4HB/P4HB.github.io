@@ -131,7 +131,7 @@ const PROJECTS = [
     // this list short and generic, limited to what's directly implied
     // by the feature set, rather than inventing specifics.
     stack: ["Motion Recognition", "Computer Vision", "Video Analysis"],
-    tags: ["app", "ai"],
+    tags: ["web", "ai"],
     readme: "projects/reelsking.md",
     links: {
       notion: "https://www.notion.so/REELSKING-24793351a63b8034be30ede53597a17f?source=copy_link",
