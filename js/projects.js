@@ -17,8 +17,8 @@ const PROJECTS = [
       en: "Hackathon · In progress",
     },
     tagline: {
-      ko: "설문과 위치 기반으로 유성구 주변 공부·휴식 공간을 추천하는 Flutter 앱",
-      en: "A Flutter app recommending study and rest spots around Yuseong-gu from survey and location context.",
+      ko: "전국 대학생의 상황과 위치를 바탕으로 공부·휴식 공간을 추천하는 Flutter 앱",
+      en: "A Flutter app recommending study and rest spots for university students from survey and location context.",
     },
     focus: {
       ko: [
