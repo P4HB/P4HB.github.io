@@ -40,9 +40,9 @@ const I18N = {
     hero: {
       eyebrow: "Portfolio / 2026",
       name: "P4HB",
-      nameNote: "(GitHub: P4HB — 실명은 추후 업데이트 예정)",
+      nameNote: "KAIST CS · Vehicle Data AI · Full-stack / Embedded",
       tagline:
-        "학교에서 배우고, 현장에서 증명합니다. KAIST 전산학부 학생이자 실제 차량 데이터로 AI를 만드는 풀스택·임베디드 엔지니어입니다.",
+        "실제 차량 센서 데이터와 제품 구현 사이를 잇습니다. KAIST 전산학부에서 컴퓨터과학을 배우고, 현장 데이터로 AI 파이프라인과 풀스택 제품을 만듭니다.",
       badges: ["KAIST 전산학부", "AI", "Full-stack", "Embedded"],
       contact: {
         githubLabel: "GitHub",
@@ -55,7 +55,7 @@ const I18N = {
 
     highlights: {
       title: "하이라이트",
-      subtitle: "숫자보다 실제로 한 일로 설명합니다.",
+      subtitle: "학습, 현장 경험, 직접 만든 결과물을 한 화면에 압축했습니다.",
       items: [
         {
           icon: "education",
@@ -140,7 +140,7 @@ const I18N = {
 
     projects: {
       title: "프로젝트",
-      subtitle: "직접 기획하고 끝까지 만든 프로젝트들입니다.",
+      subtitle: "아이디어에서 구현, 분석, 배포까지 직접 밀어붙인 작업들입니다.",
       filterAll: "전체",
       tagLabels: {
         game: "게임",
@@ -233,9 +233,9 @@ const I18N = {
     hero: {
       eyebrow: "Portfolio / 2026",
       name: "P4HB",
-      nameNote: "(GitHub handle: P4HB — real name to be added later)",
+      nameNote: "KAIST CS · Vehicle Data AI · Full-stack / Embedded",
       tagline:
-        "Trained in the classroom, proven in the field. A KAIST Computer Science student and full-stack / embedded engineer who builds AI on real vehicle data.",
+        "I connect real vehicle sensor data with shipped software. At KAIST CS, I build across AI pipelines, embedded logging, and full-stack products.",
       badges: ["KAIST School of Computing", "AI", "Full-stack", "Embedded"],
       contact: {
         githubLabel: "GitHub",
@@ -248,7 +248,7 @@ const I18N = {
 
     highlights: {
       title: "Highlights",
-      subtitle: "Described by what was actually built, not just numbers.",
+      subtitle: "Education, field experience, and shipped work in one focused snapshot.",
       items: [
         {
           icon: "education",
@@ -333,7 +333,7 @@ const I18N = {
 
     projects: {
       title: "Projects",
-      subtitle: "Self-directed projects, carried through to completion.",
+      subtitle: "Self-directed work pushed from idea to implementation, analysis, and release.",
       filterAll: "All",
       tagLabels: {
         game: "Game",
