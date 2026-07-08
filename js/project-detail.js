@@ -202,7 +202,7 @@
     var body = qs("[data-markdown-body]");
 
     if (!project) {
-      document.title = "Project not found | P4HB";
+      document.title = "Project not found | Yunje Lee";
       qs("[data-detail-title]").textContent = "Project not found";
       body.innerHTML = "<p>프로젝트 정보를 찾을 수 없습니다.</p>";
       return;
@@ -211,7 +211,7 @@
     var title = project.name.ko || project.name.en || project.id;
     qs("[data-detail-title]").textContent = title;
     qs("[data-detail-tagline]").textContent = project.tagline.ko || project.tagline.en || "";
-    document.title = title + " | P4HB";
+    document.title = title + " | Yunje Lee";
     renderActions(project);
 
     if (!project.readme) {
