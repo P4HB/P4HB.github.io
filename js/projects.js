@@ -133,7 +133,9 @@ const PROJECTS = [
     stack: ["Motion Recognition", "Computer Vision", "Video Analysis"],
     tags: ["app", "ai"],
     readme: "projects/reelsking.md",
-    links: {},
+    links: {
+      notion: "https://www.notion.so/REELSKING-24793351a63b8034be30ede53597a17f?source=copy_link",
+    },
     highlights: {
       ko: [
         "유튜브·업로드·웹캠 기반 모션 인식 채점 플로우 구현",
