@@ -167,7 +167,7 @@ const I18N = {
 
     skills: {
       title: "기술 스택",
-      subtitle: "실제로 써서 무언가를 완성해 본 것들입니다.",
+      subtitle: "프로젝트와 실무에서 사용한 도구들을 분류했습니다.",
       groups: [
         {
           label: "언어",
@@ -360,7 +360,7 @@ const I18N = {
 
     skills: {
       title: "Skills",
-      subtitle: "Things actually used to ship something.",
+      subtitle: "Tools grouped by where they fit in the work.",
       groups: [
         {
           label: "Languages",
