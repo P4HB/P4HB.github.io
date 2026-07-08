@@ -20,7 +20,7 @@ const I18N = {
       brand: "P4HB",
       links: [
         { id: "home", label: "홈" },
-        { id: "highlights", label: "방향" },
+        { id: "highlights", label: "역량" },
         { id: "experience", label: "경험" },
         { id: "projects", label: "프로젝트" },
         { id: "skills", label: "기술" },
@@ -54,32 +54,32 @@ const I18N = {
     },
 
     highlights: {
-      title: "만드는 방향",
-      subtitle: "단순한 기능 목록보다, 어떤 문제를 어떤 구조로 풀었는지가 드러나도록 정리했습니다.",
+      title: "핵심 역량",
+      subtitle: "AI, 풀스택 개발, 데이터 분석을 중심으로 프로젝트를 구현합니다.",
       items: [
         {
           icon: "cpu",
-          label: "AI 제품화",
-          title: "모델 호출에서 끝내지 않고 제품 흐름에 붙입니다",
-          body: "후보 검색, 1차 스코어링, LLM 재정렬, 실패 대응까지 사용자가 실제로 쓰는 흐름 안에서 설계합니다.",
+          label: "AI",
+          title: "LLM 기반 기능 구현",
+          body: "추천, RAG, 후보 스코어링, LLM 재정렬, fallback 로직",
         },
         {
           icon: "layers",
-          label: "엔드투엔드 구현",
-          title: "프론트, 백엔드, 데이터 흐름을 이어서 만듭니다",
-          body: "앱 화면, 상태 관리, API, DB, 배포 흐름까지 작은 팀에서도 완성 가능한 단위로 구현합니다.",
+          label: "Full-stack",
+          title: "프론트엔드·백엔드 개발",
+          body: "웹/앱 화면, 상태 관리, API, DB, 배포까지 제품 단위 구현",
         },
         {
           icon: "briefcase",
-          label: "현장 데이터",
-          title: "로그와 센서 데이터도 제품의 일부로 다룹니다",
-          body: "GNSS/CAN 등 시계열 데이터를 정리하고 모델 입력으로 바꾸는 파이프라인을 다뤄봤습니다.",
+          label: "Data",
+          title: "데이터 분석 및 전처리",
+          body: "GNSS/CAN 시계열 데이터, 로그 처리, 모델 입력 파이프라인",
         },
         {
           icon: "education",
-          label: "CS 기반",
-          title: "KAIST 전산학부에서 기본기를 쌓고 있습니다",
-          body: "알고리즘, 시스템, AI 기초를 바탕으로 빠르게 만들되 구조를 놓치지 않으려 합니다.",
+          label: "CS",
+          title: "KAIST 전산학부",
+          body: "알고리즘, 시스템, AI 기초를 바탕으로 한 구현 역량",
         },
       ],
     },
@@ -136,7 +136,7 @@ const I18N = {
 
     projects: {
       title: "프로젝트",
-      subtitle: "완성도보다 더 중요한 것은 문제를 잡고, 구조를 만들고, 실제 동작까지 밀어붙인 기록입니다.",
+      subtitle: "아이디어에서 구현, 분석, 배포까지 직접 밀어붙인 작업들입니다.",
       filterAll: "전체",
       tagLabels: {
         game: "게임",
@@ -211,7 +211,7 @@ const I18N = {
       brand: "P4HB",
       links: [
         { id: "home", label: "Home" },
-        { id: "highlights", label: "Direction" },
+        { id: "highlights", label: "Strengths" },
         { id: "experience", label: "Experience" },
         { id: "projects", label: "Projects" },
         { id: "skills", label: "Skills" },
@@ -245,32 +245,32 @@ const I18N = {
     },
 
     highlights: {
-      title: "Build Direction",
-      subtitle: "A clearer view of the problems I choose and the systems I build around them.",
+      title: "Core Strengths",
+      subtitle: "AI, full-stack development, and data analysis across working projects.",
       items: [
         {
           icon: "cpu",
-          label: "AI Productization",
-          title: "I connect model calls to real product flows",
-          body: "Search, first-pass scoring, LLM reranking, and fallback logic are designed around how the user actually moves through the product.",
+          label: "AI",
+          title: "LLM-powered feature development",
+          body: "Recommendation, RAG, candidate scoring, LLM reranking, and fallback logic",
         },
         {
           icon: "layers",
-          label: "End-to-end",
-          title: "I connect frontend, backend, and data flow",
-          body: "Screens, state, APIs, databases, and deployment are shaped into units a small team can actually ship.",
+          label: "Full-stack",
+          title: "Frontend and backend development",
+          body: "Web/app screens, state, APIs, databases, and deployment",
         },
         {
           icon: "briefcase",
-          label: "Field Data",
-          title: "I treat logs and sensor data as product material",
-          body: "I have worked with GNSS/CAN time-series data and model-input preprocessing pipelines.",
+          label: "Data",
+          title: "Data analysis and preprocessing",
+          body: "GNSS/CAN time-series data, logs, and model-input pipelines",
         },
         {
           icon: "education",
-          label: "CS Foundation",
-          title: "Building from a KAIST CS foundation",
-          body: "I move fast, but try to keep the structure grounded in algorithms, systems, and AI fundamentals.",
+          label: "CS",
+          title: "KAIST School of Computing",
+          body: "Implementation grounded in algorithms, systems, and AI fundamentals",
         },
       ],
     },
@@ -327,7 +327,7 @@ const I18N = {
 
     projects: {
       title: "Projects",
-      subtitle: "Not just feature lists: each card shows the problem, the build, and the technical core.",
+      subtitle: "Self-directed work pushed from idea to implementation, analysis, and release.",
       filterAll: "All",
       tagLabels: {
         game: "Game",
